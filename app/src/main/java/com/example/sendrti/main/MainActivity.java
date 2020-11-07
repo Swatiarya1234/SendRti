@@ -27,7 +27,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-
+//This is my Main activity file
 public class MainActivity extends AppCompatActivity {
 
     private AppCompatActivity mAppBarConfiguration;
