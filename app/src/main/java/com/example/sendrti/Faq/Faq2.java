@@ -17,6 +17,7 @@ import com.example.sendrti.R;
 
 public class Faq2 extends Fragment implements View.OnClickListener {
 
+    //later remove the class name
     private Faq2ViewModel mViewModel;
     private TextView getView;
     private ToggleButton plusbutton, Plusbutton2, plusbutton3, plusbutton4, plusbutton5;
