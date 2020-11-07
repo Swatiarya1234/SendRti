@@ -10,17 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.sendrti.ModelClass.ChatModel;
 import com.example.sendrti.R;
 
 import java.util.ArrayList;
 
 public class ChatAdapter extends RecyclerView.Adapter {
 
-    private ArrayList<ChatModel2>dataSet = new ArrayList<>();
+    private ArrayList<ChatModel>dataSet = new ArrayList<>();
     Context mContext;
     int total_types;
 
-    public ChatAdapter(ArrayList<ChatModel2>data, Context context) {
+    public ChatAdapter(ArrayList<ChatModel>data, Context context) {
         this.dataSet = data;
         this.mContext = context;
         total_types = dataSet.size();
@@ -37,11 +38,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
         View view;
         switch (viewType) {
 
-            case ChatModel2.RECEIVERTYPE:
+            case ChatModel.RECEIVERTYPE:
                 view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.activity_image_imageleft, parent, false);
                 return new MyViewHolder(view);
-            case ChatModel2.SENDERTYPE:
+            case ChatModel.SENDERTYPE:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_image_imageright, parent, false);
                 return new MyViewHolder2(view);
 
@@ -65,9 +66,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
         switch (dataSet.get(position).type) {
             case 0:
-                return ChatModel2.RECEIVERTYPE;
+                return ChatModel.RECEIVERTYPE;
             case 1:
-                return ChatModel2.SENDERTYPE;
+                return ChatModel.SENDERTYPE;
 
 //            case 2:
 //                return ChatModel.AUDIO_TYPE;

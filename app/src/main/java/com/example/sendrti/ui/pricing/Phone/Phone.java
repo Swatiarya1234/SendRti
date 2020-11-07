@@ -16,7 +16,7 @@ import com.example.sendrti.R;
 
 public class Phone extends Fragment {
 
-    private PhoneViewModel mViewModel;
+    private Phone2ViewModel mViewModel;
 
     public static Phone newInstance() {
         return new Phone();
@@ -33,7 +33,7 @@ public class Phone extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(PhoneViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(Phone2ViewModel.class);
         // TODO: Use the ViewModel
     }
 

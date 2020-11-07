@@ -147,7 +147,7 @@ public class Sendbird extends Fragment {
     }
 
     // Set touch listeners to RecyclerView items
-    private void setUpChannelListAdapter(View view) {
+    private void setUpChannelListAdapter(final View view) {
         mChannelListAdapter.setOnItemClickListener(new OpenChannelListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(OpenChannel channel) {

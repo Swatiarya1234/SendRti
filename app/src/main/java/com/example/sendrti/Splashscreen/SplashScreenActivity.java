@@ -77,7 +77,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
 
         PrefrenceUtil.init(getApplicationContext());
-        SendBird.init(getApplication());
+       // SendBird.init(getApplication());
 
 
       //  SendBird.init(getApplication());
@@ -291,33 +291,33 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
     private void updateCurrentUserInfo(final String userNickname) {
 
-        SendBird.updateCurrentUserInfo(userNickname, null, new SendBird.UserInfoUpdateHandler() {
-            @Override
-            public void onUpdated(SendBirdException e) {
-                if (e != null) {
-                    // Error!
-                    Toast.makeText(
-                            getApplicationContext(), "" + e.getCode() + ":" + e.getMessage(),
-                            Toast.LENGTH_SHORT)
-                            .show();
-
-                    // Show update failed snackbar
-                    showSnackbar("Update user nickname failed");
-
-                    return;
-                }
-
-                PrefrenceUtil.setNickname(userNickname);
-            }
-        });
+//        SendBird.updateCurrentUserInfo(userNickname, null, new SendBird.UserInfoUpdateHandler() {
+//            @Override
+//            public void onUpdated(SendBirdException e) {
+//                if (e != null) {
+//                    // Error!
+//                    Toast.makeText(
+//                            getApplicationContext(), "" + e.getCode() + ":" + e.getMessage(),
+//                            Toast.LENGTH_SHORT)
+//                            .show();
+//
+//                    // Show update failed snackbar
+//                    showSnackbar("Update user nickname failed");
+//
+//                    return;
+//                }
+//
+//                PrefrenceUtil.setNickname(userNickname);
+//            }
+//        });
     }
 
     private void showSnackbar(String text) {
 
        // Snackbar snackbar = Snakbar.make(mLoginLayout,text,Snackbar.LENGTH_SHORT)
-        Snackbar snackbar = Snackbar.make(mLoginLayout, text, Snackbar.LENGTH_SHORT);
-
-        snackbar.show();
+//        Snackbar snackbar = Snackbar.make(mLoginLayout, text, Snackbar.LENGTH_SHORT);
+//
+//        snackbar.show();
     }
 
     // Shows or hides the ProgressBar
