@@ -10,8 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sendrti.ModelClass.ChatModel2;
-import com.sendbird.android.shadow.com.google.gson.internal.bind.ReflectiveTypeAdapterFactory;
+import com.example.sendrti.R;
 
 import java.util.ArrayList;
 
@@ -39,7 +38,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
         switch (viewType) {
 
             case ChatModel2.RECEIVERTYPE:
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_image_imageleft, parent, false);
+                view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.activity_image_imageleft, parent, false);
                 return new MyViewHolder(view);
             case ChatModel2.SENDERTYPE:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_image_imageright, parent, false);

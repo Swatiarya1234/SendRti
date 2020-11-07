@@ -10,18 +10,12 @@ import androidx.lifecycle.ViewModelProviders;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.FrameLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.sendrti.R;
-import com.example.sendrti.ui.Dashboard.DetailsofRti.DeatilsofRtiViewModel;
-import com.example.sendrti.ui.Dashboard.SafeDetails.safepayemtssubfragment.Safedetailssubfragment2;
-import com.google.android.gms.common.internal.Objects;
+import com.example.sendrti.ui.Dashboard.SafeDetails.safepayemtssubfragment.Safedetailssubfragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -88,7 +82,7 @@ public class SafeDetails extends Fragment implements  View.OnClickListener{
                     savepayments.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.framelayout, new Safedetailssubfragment2());
+                    transaction.replace(R.id.framelayout, new Safedetailssubfragment());
                     transaction.addToBackStack(null);
                     transaction.commit();
 
@@ -112,7 +106,7 @@ public class SafeDetails extends Fragment implements  View.OnClickListener{
                     cost.setText("Rs 499");
                     frameLayout.setVisibility(View.VISIBLE);
                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.framelayout, new Safedetailssubfragment2());
+                    transaction.replace(R.id.framelayout, new Safedetailssubfragment());
                     transaction.addToBackStack(null);
                     transaction.commit();
 

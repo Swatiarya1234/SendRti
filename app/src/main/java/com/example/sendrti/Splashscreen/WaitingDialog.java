@@ -43,36 +43,36 @@ public class WaitingDialog {
     public static void show(final Context context, final boolean cancelable, final int layoutResId, final DialogInterface.OnCancelListener listener) {
         dismiss();
 
-        mainHandler.post(() -> {
-            Log.d(TAG, ">> WaitingDialog::show()");
-            waitingDialog = getWaitingDialog(context);
-            // here we set layout of progress dialog
-            if (layoutResId <= 0) {
-                waitingDialog.setContentView(R.layout.view_waiting_dialog);
-            } else {
-                waitingDialog.setContentView(layoutResId);
-            }
-            waitingDialog.setCancelable(cancelable);
-            if (listener != null) {
-                waitingDialog.setOnCancelListener(listener);
-            }
-            waitingDialog.show();
-        });
+//        mainHandler.post(() -> {
+//            Log.d(TAG, ">> WaitingDialog::show()");
+//            waitingDialog = getWaitingDialog(context);
+//            // here we set layout of progress dialog
+//            if (layoutResId <= 0) {
+//                waitingDialog.setContentView(R.layout.view_waiting_dialog);
+//            } else {
+//                waitingDialog.setContentView(layoutResId);
+//            }
+//            waitingDialog.setCancelable(cancelable);
+//            if (listener != null) {
+//                waitingDialog.setOnCancelListener(listener);
+//            }
+//            waitingDialog.show();
+//        });
     }
 
     public static void dismiss() {
-        mainHandler.post(() -> {
-            try {
-                Log.d(TAG, ">> WaitingDialog::cancel()");
-                if (waitingDialog != null) {
-                    synchronized (waitingDialogLock) {
-                        waitingDialog.cancel();
-                        waitingDialog = null;
-                    }
-                }
-            } catch (Exception e) {
-                Log.d(TAG, "", e);
-            }
-        });
+//        mainHandler.post(() -> {
+//            try {
+//                Log.d(TAG, ">> WaitingDialog::cancel()");
+//                if (waitingDialog != null) {
+//                    synchronized (waitingDialogLock) {
+//                        waitingDialog.cancel();
+//                        waitingDialog = null;
+//                    }
+//                }
+//            } catch (Exception e) {
+//                Log.d(TAG, "", e);
+//            }
+//        });
     }
 }

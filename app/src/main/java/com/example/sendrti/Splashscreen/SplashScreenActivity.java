@@ -17,15 +17,13 @@ import android.widget.Toast;
 
 import com.example.sendrti.PrefrenceUtil.PrefrenceUtil;
 import com.example.sendrti.R;
-import com.example.sendrti.main.MainActivity2;
+import com.example.sendrti.main.MainActivity;
 import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -153,7 +151,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         continuewasguest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), MainActivity2.class);
+                Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -222,7 +220,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         PrefrenceUtil.setNickname(user.getDisplayName());
         connectToSendBird(user.getEmail(), user.getDisplayName());
 
-        Intent intent = new Intent(getApplication(), MainActivity2.class);
+        Intent intent = new Intent(getApplication(), MainActivity.class);
         intent.putExtra("Username",user.getDisplayName
                 ());
         intent.putExtra("Email",user.getEmail());
@@ -283,7 +281,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
                 //  com.sendbird.android.sample.utils.PushUtils.registerPushHandler(new MyFirebaseMessagingService());
 
                 // Proceed to MainActivity
-                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
             }

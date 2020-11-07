@@ -29,7 +29,7 @@ public class ApplicationProgress extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProvideers.of(this).get(ApplicationProgressViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(ApplicationProgressViewModel.class);
         // TODO: Use the ViewModel
     }
 

@@ -1,5 +1,13 @@
 package com.example.sendrti.main;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,28 +18,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.sendrti.PrefrenceUtil.PrefrenceUtil;
 import com.example.sendrti.R;
 import com.example.sendrti.Splashscreen.SplashScreenActivity;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-//This is my Main activity file
 public class MainActivity extends AppCompatActivity {
 
-    private AppCompatActivity mAppBarConfiguration;
-    private NavController navcontroller;
+    private AppBarConfiguration mAppBarConfiguration;
+    private NavController navController;
     private TextView textview,textview3;
     private ImageView imageview;
     private FirebaseAuth firebaseAuth;
@@ -39,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavController navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-        textview = (TextView) headerView.findViewById(R.id.text2);
-        textview3 = (TextView)headerView.findViewById(R.id.textView);
-        imageview = (ImageView) headerView.findViewById(R.id.imagebtn2);
+        textview = (TextView) headerView.findViewById(R.id.name);
+        textview3 = (TextView)headerView.findViewById(R.id.emailaddress);
+        imageview = (ImageView) headerView.findViewById(R.id.imageView);
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("Username");
@@ -60,15 +59,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser account = firebaseAuth.getCurrentUser();
 
         try{
-
+            
             assert account != null;
             Uri uri = account.getPhotoUrl();
-            RequestOptions requestOptions = new RequestOptions();
-            requestOptions.placeholder(R.drawable.backgroundblack);
-            requestOptions.error(R.drawable.email);
-            Glide.with(this).load(uri).apply(new RequestOptions().placeholder(R.drawable.backgroundblack).error(R.drawable.background2)).into(imageview);
-
-            //   imageview.setBackgroundResource(uri);
+            Glide.with(this).load(uri).apply(new RequestOptions()
+                    .placeholder(R.mipmap.ic_launcher)
+                    .fitCenter())
+                    .into(imageview);
+         //   imageview.setBackgroundResource(uri);
         }
         catch (NullPointerException e){
             Toast.makeText(getApplicationContext(),"image not found",Toast.LENGTH_LONG).show();
@@ -99,13 +97,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.mainnavcontroller, menu);
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_item_one) {
+        if (id == R.id.action_home) {
 
             navController.navigate(R.id.nav_Home2);
             //   navController.navigate(R.id.nav_Home2);
@@ -113,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             // your code
             return true;
         }
-        if(id == R.id.action_item_two){
+        if(id == R.id.action_notifiaction){
 
             //navController.navigate(R.id.nav_home);
             navController.navigate(R.id.nav_notification);
@@ -136,3 +134,5 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
+
+

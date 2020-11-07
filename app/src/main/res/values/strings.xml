@@ -85,5 +85,6 @@
     <string name="ChatFragment">ChatFragment</string>
     <string name="login_user_id">loginwithuser</string>
     <string name="login_user_nickname">loginusernickname</string>
+    <string name="menu_Query">Query</string>
 
 </resources>

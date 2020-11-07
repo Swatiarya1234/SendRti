@@ -11,15 +11,15 @@ import com.example.sendrti.ui.Dashboard.SafeDetails.SafeDetails;
 import com.example.sendrti.ui.pricing.Email.Email;
 import com.example.sendrti.ui.pricing.Phone.Phone;
 
-public class Pager2 extends FragmentStatePagerAdapter {
+public class PagerPricing extends FragmentStatePagerAdapter {
 
     int tabCount;
-    public Pager2(@NonNull FragmentManager fm) {
+    public PagerPricing(@NonNull FragmentManager fm) {
         super(fm);
 
     }
 
-    public Pager2(@NonNull FragmentManager fm, int behavior) {
+    public PagerPricing(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
         this.tabCount= behavior;
 

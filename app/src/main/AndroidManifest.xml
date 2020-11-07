@@ -25,7 +25,6 @@
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.Downloadyourapi.Downloadyouapi" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.AppliactionStatus.ApplicationStatu" />
         <activity android:name=".ui.passport.Passpor" />
-        <activity android:name=".main.MainActivity" />
         <activity android:name=".LoginwithSendBird.SendBird" />
         <activity
             android:name=".Splashscreen.SplashScreenActivity"
@@ -37,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main.MainActivity2"
+            android:name=".main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Sendbird.CreateOpenChannelActivity" />

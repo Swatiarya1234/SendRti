@@ -13,9 +13,9 @@ import com.example.sendrti.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Safedetailssubfragment2 extends Fragment {
+public class Safedetailssubfragment extends Fragment {
 
-    public Safedetailssubfragment2() {
+    public Safedetailssubfragment() {
         // Required empty public constructor
     }
 

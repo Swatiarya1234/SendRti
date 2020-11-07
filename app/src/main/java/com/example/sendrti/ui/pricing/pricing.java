@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sendrti.R;
-import com.example.sendrti.ui.Dashboard.Tabhost.Pager;
 import com.google.android.material.tabs.TabLayout;
 
 public class pricing extends Fragment implements TabLayout.OnTabSelectedListener {
@@ -49,7 +48,7 @@ public class pricing extends Fragment implements TabLayout.OnTabSelectedListener
         tabLayout.setTabTextColors(ColorStateList.valueOf(orange));
 
 
-        Pager2 adapter = new Pager2(getFragmentManager(), tabLayout.getTabCount());
+        PagerPricing adapter = new PagerPricing(getFragmentManager(), tabLayout.getTabCount());
 
         //Adding adapter to pager
         viewPager.setAdapter(adapter);

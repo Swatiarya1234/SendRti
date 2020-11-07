@@ -21,8 +21,6 @@ import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.example.sendrti.Adapter.AppliactiondetailsAdapter;
-import com.example.sendrti.Adapter.ChatAdapter2;
 import com.example.sendrti.ModelClass.AppliactionDetailsModel;
 import com.example.sendrti.ModelClass.RtiModel;
 import com.example.sendrti.R;
@@ -36,7 +34,7 @@ public class Appliactiondetails extends Fragment implements View.OnClickListener
 
     private AppliactiondetailsViewModel mViewModel;
     public List< AppliactionDetailsModel> appliactionDetailsModels= new ArrayList<>();
-    AppliactiondetailsAdapter appliactiondetailsAdapter;
+   // AppliactiondetailsAdapter appliactiondetailsAdapter;
     private RecyclerView recyclerView;
     //This is our tablayout
 
@@ -54,10 +52,10 @@ public class Appliactiondetails extends Fragment implements View.OnClickListener
 
         appliactiondetails();
 
-        appliactiondetailsAdapter = new AppliactiondetailsAdapter(appliactionDetailsModels,getActivity());
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(appliactiondetailsAdapter);
+//        appliactiondetailsAdapter = new AppliactiondetailsAdapter(appliactionDetailsModels,getActivity());
+//        RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false);
+//        recyclerView.setLayoutManager(manager);
+//        recyclerView.setAdapter(appliactiondetailsAdapter);
 
 
 //        //Adding the tabs using addTab() method

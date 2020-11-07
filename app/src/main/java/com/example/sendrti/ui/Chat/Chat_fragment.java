@@ -38,14 +38,14 @@ import android.widget.Toast;
 
 
 import com.example.sendrti.Adapter.ChatAdapter;
-import com.example.sendrti.ModelClass.ChatModel2;
+import com.example.sendrti.ModelClass.ChatModel;
 import com.example.sendrti.PrefrenceUtil.FileUtils;
 import com.example.sendrti.PrefrenceUtil.MediaPlayerActivity;
 import com.example.sendrti.PrefrenceUtil.PhotoViewerActivity;
 import com.example.sendrti.PrefrenceUtil.PrefrenceUtil;
 import com.example.sendrti.R;
-import com.example.sendrti.Sendbird.OpenChatAdapter;
 import com.example.sendrti.Splashscreen.ConnectionManager;
+import com.google.android.material.snackbar.Snackbar;
 import com.sendbird.android.AdminMessage;
 import com.sendbird.android.BaseChannel;
 import com.sendbird.android.BaseMessage;
@@ -64,7 +64,7 @@ import java.util.List;
 public class Chat_fragment extends Fragment implements View.OnClickListener {
 
     private ChatFragmentViewModel2 mViewModel;
-    private List<ChatModel2> studentData = new ArrayList<>();
+    private List<ChatModel> studentData = new ArrayList<>();
 
     private RecyclerView mRecyclerView;
     private ChatAdapter getStudentAdapter;
@@ -281,7 +281,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
             public void onMessageReceived(BaseChannel baseChannel, BaseMessage baseMessage) {
                 // Add new message to view
                 if (baseChannel.getUrl().equals(mChannelUrl)) {
-                    mChatAdapter.addFirst(baseMessage);
+                  //  mChatAdapter.addFirst(baseMessage);
                 }
             }
 
@@ -289,7 +289,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
             public void onMessageDeleted(BaseChannel baseChannel, long msgId) {
                 super.onMessageDeleted(baseChannel, msgId);
                 if (baseChannel.getUrl().equals(mChannelUrl)) {
-                    mChatAdapter.delete(msgId);
+                   // mChatAdapter.delete(msgId);
                 }
             }
 
@@ -297,7 +297,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
             public void onMessageUpdated(BaseChannel channel, BaseMessage message) {
                 super.onMessageUpdated(channel, message);
                 if (channel.getUrl().equals(mChannelUrl)) {
-                    mChatAdapter.update(message);
+                  //  mChatAdapter.update(message);
                 }
             }
         });
@@ -350,43 +350,43 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
 //    }
 
     private void setUpChatAdapter() {
-        mChatAdapter = new OpenChatAdapter(getContext());
-        mChatAdapter.setOnItemClickListener(new OpenChatAdapter.OnItemClickListener() {
-            @Override
-            public void onUserMessageItemClick(UserMessage message) {
-
-            }
-
-            @Override
-            public void onFileMessageItemClick(FileMessage message) {
-
-                onFileMessageClicked(message);
-            }
-
-            @Override
-            public void onAdminMessageItemClick(AdminMessage message) {
-
-            }
-        });
-        mChatAdapter.setOnItemLongClickListener(new OpenChatAdapter.OnItemLongClickListener() {
-            @Override
-            public void onUserMessageItemLongClick(UserMessage message, int position) {
-
-                if (message.getSender().getUserId().equals(PrefrenceUtil.getUserId())) {
-                    showMessageOptionsDialog(message, position);
-                }
-            }
-
-            @Override
-            public void onFileMessageItemLongClick(FileMessage message) {
-
-            }
-
-            @Override
-            public void onAdminMessageItemLongClick(AdminMessage message) {
-
-            }
-        });
+//        mChatAdapter = new OpenChatAdapter(getContext());
+//        mChatAdapter.setOnItemClickListener(new OpenChatAdapter.OnItemClickListener() {
+//            @Override
+//            public void onUserMessageItemClick(UserMessage message) {
+//
+//            }
+//
+//            @Override
+//            public void onFileMessageItemClick(FileMessage message) {
+//
+//                onFileMessageClicked(message);
+//            }
+//
+//            @Override
+//            public void onAdminMessageItemClick(AdminMessage message) {
+//
+//            }
+//        });
+//        mChatAdapter.setOnItemLongClickListener(new OpenChatAdapter.OnItemLongClickListener() {
+//            @Override
+//            public void onUserMessageItemLongClick(UserMessage message, int position) {
+//
+//                if (message.getSender().getUserId().equals(PrefrenceUtil.getUserId())) {
+//                    showMessageOptionsDialog(message, position);
+//                }
+//            }
+//
+//            @Override
+//            public void onFileMessageItemLongClick(FileMessage message) {
+//
+//            }
+//
+//            @Override
+//            public void onAdminMessageItemLongClick(AdminMessage message) {
+//
+//            }
+//        });
     }
 
     private void showMessageOptionsDialog(final BaseMessage message, final int position) {
@@ -470,19 +470,19 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setReverseLayout(true);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mChatAdapter);
-
-        // Load more messages when user reaches the top of the current message list.
-        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-
-                if (mLayoutManager.findLastVisibleItemPosition() == mChatAdapter.getItemCount() - 1) {
-                    loadNextMessageList(CHANNEL_LIST_LIMIT);
-                }
-                Log.v(LOG_TAG, "onScrollStateChanged");
-            }
-        });
+//        mRecyclerView.setAdapter(mChatAdapter);
+//
+//        // Load more messages when user reaches the top of the current message list.
+//        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//
+//                if (mLayoutManager.findLastVisibleItemPosition() == mChatAdapter.getItemCount() - 1) {
+//                    loadNextMessageList(CHANNEL_LIST_LIMIT);
+//                }
+//                Log.v(LOG_TAG, "onScrollStateChanged");
+//            }
+//        });
     }
 
     private void onFileMessageClicked(FileMessage message) {
@@ -639,7 +639,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
                 }
 
                 // Display sent message to RecyclerView
-                mChatAdapter.addFirst(userMessage);
+              //  mChatAdapter.addFirst(userMessage);
             }
         });
     }
@@ -683,7 +683,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
                         return;
                     }
 
-                    mChatAdapter.addFirst(fileMessage);
+                  //  mChatAdapter.addFirst(fileMessage);
                 }
             });
         }
@@ -709,7 +709,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
                     return;
                 }
 
-                mChatAdapter.setMessageList(list);
+              //  mChatAdapter.setMessageList(list);
             }
         });
 
@@ -741,7 +741,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
                 }
 
                 for (BaseMessage message : list) {
-                    mChatAdapter.addLast((message));
+                   // mChatAdapter.addLast((message));
                 }
             }
         });
@@ -856,7 +856,7 @@ public class Chat_fragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(ChatFragmentViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(ChatFragmentViewModel2.class);
         // TODO: Use the ViewModel
     }
 
