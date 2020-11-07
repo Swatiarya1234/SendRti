@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.UplaodRelevantAttachment.UploadRelevantAttachment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/backgroundapplynow"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="13dp"
+            android:text="Upload attachment, if any"
+            android:textColor="@color/orange"
+            android:gravity="center"
+            android:textSize="23dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="27dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/backgroundblack">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="23dp"
+                android:text="Note:- In case of any issue in uploading the attachments, you can e-mail us at support@sendrti.com along with your RTI Application number."
+                android:textColor="@color/orange"
+                android:gravity="center"
+                android:textSize="13dp">
+            </TextView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="13dp"
+                android:text="Choose File"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="13dp">
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="No file choose"
+                android:paddingLeft="12dp"
+                android:padding="2dp"
+                android:background="@null"
+                android:layout_marginBottom="10dp">
+
+            </TextView>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="10dp"
+                android:text="Proceed to payment"
+                android:background="@color/orange"
+                android:layout_marginBottom="23dp">
+
+            </Button>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.MyRtiApplication.MyRtiApplication">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/backgroundapplynow"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="13dp"
+            android:text="Application No: RTI2020Sep-55"
+            android:textColor="@color/orange"
+            android:gravity="center"
+            android:textSize="12dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/backgroundblack">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="23dp"
+                android:text="Application No: RTI2020Sep-55"
+                android:textColor="@color/orange"
+                android:gravity="center"
+                android:textSize="13dp">
+            </TextView>
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:stretchColumns="*"
+                android:background="@color/black"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginBottom="23dp">
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#92C94A">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/Nameofapplicant"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#92C94A">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/Rollnumber"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow34"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#92C94A">
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/NameofExam"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow23"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#92C94A">
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/DateOfExam"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow77"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#92C94A">
+
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/MoreInformation"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

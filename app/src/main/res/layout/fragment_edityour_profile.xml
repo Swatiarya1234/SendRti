@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.EdityourProfile.EdityourProfile">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/backgroundapplynow"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="13dp"
+            android:text="Application No: RTI2020Sep-55"
+            android:textColor="@color/orange"
+            android:gravity="center"
+            android:textSize="12dp">
+
+        </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/backgroundblack">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="6dp"
+            android:text="Edit Profile"
+            android:textColor="@color/orange"
+            android:gravity="center"
+            android:textSize="13dp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginLeft="23dp"
+                android:hint="@string/Name"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroundapplynow">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginLeft="23dp"
+                android:hint="@string/LastName"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroundapplynow">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginLeft="23dp"
+                android:hint="@string/YourEmail"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroundapplynow">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginLeft="23dp"
+                android:hint="@string/YourMobileNo"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroundapplynow">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginLeft="23dp"
+                android:hint="@string/YourAddress"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroundapplynow">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginLeft="23dp"
+                android:hint="@string/Pincode"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroundapplynow">
+
+            </EditText>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/textid5"
+                android:gravity="center"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginBottom="6dp"
+                android:textSize="12dp"
+                android:text="Proceed to payment"
+                android:src="@drawable/backgroundblack"
+                android:background="@color/yellow3"
+                android:textColor="@color/orange"
+                android:layout_marginTop="3dp">
+
+            </Button>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>

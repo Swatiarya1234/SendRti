@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.ApplicationProgress">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/backgroundapplynow">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/backgroundblack"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp">
+            
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="23dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:textColor="@color/orange"
+                android:text="Your Appliaction Progress">
+            </TextView>
+
+
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </SeekBar>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textid"
+                android:text="Track Id:"
+                android:gravity="center"
+                android:textSize="34dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textid3"
+                android:text="No progress has been made as we have not received payment for this Application."
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/orange"
+                android:layout_marginTop="23dp">
+
+            </TextView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/textid5"
+                android:gravity="center"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginBottom="23dp"
+                android:textSize="16dp"
+                android:text="Proceed to payment"
+                android:src="@drawable/backgroundblack"
+                android:background="@color/yellow3"
+                android:textColor="@color/orange"
+                android:layout_marginTop="13dp">
+
+            </Button>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+

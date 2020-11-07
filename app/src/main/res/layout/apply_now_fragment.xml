@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home.ApplyNow.ApplyNow">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="25dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uncheked12"
+            android:orientation="vertical"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstname"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12sp"
+                android:text="First Name"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="Enter First name"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uncheked123"
+            android:orientation="vertical"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastname"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12sp"
+                android:text="Last Name"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="Enter Last Name"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uncheked1234"
+            android:orientation="vertical"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailid"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12sp"
+                android:text="Email"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="Enter Email"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uncheked345"
+            android:orientation="vertical"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Email"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12sp"
+                android:text="Mobile Number"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="Enter Mobile number"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uncheked678"
+            android:orientation="vertical"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phonenumber"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12sp"
+                android:text="Address"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="Enter Address"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uncheked"
+            android:orientation="vertical"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12sp"
+                android:text="Pin Code"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="Enter Pin code"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        <Button
+            android:layout_width="344dp"
+            android:layout_height="55dp"
+            android:text="NEXT"
+            android:id="@+id/next"
+            android:textSize="20dp"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:layout_marginBottom="2dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/roundedbutton">
+
+        </Button>
+        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

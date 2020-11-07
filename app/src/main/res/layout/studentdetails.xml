@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_marginLeft="234dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedrec"
+            android:padding="16dp"
+            android:text="Hello" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_gravity="start"
+            android:background="@drawable/corner" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

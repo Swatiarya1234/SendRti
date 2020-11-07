@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="Oranage">#FFA500</color>
+    <color name="colorPrimary2">#008577</color>
+    <color name="colorPrimaryDark2">#00574B</color>
+    <color name="colorAccent1">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="lightgrey" tools:ignore="MissingDefaultResource">#E5E1E1</color>
+    <color name="blue">#587afc</color>
+    <color name="cyan">#30dfb4</color>
+    <color name="orange">#f7941d</color>
+    <color name="blueDark">#1c32e4</color>
+    <color name="grey">#524f4b</color>
+    <color name="myBlack">#242424</color>
+    <color name="green">#3de0a1</color>
+    <color name="lightBlue">#0375bc</color>
+    <color name="white">#ffffff</color>
+    <color name="red" >#ff0000</color>
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+    <color name="darkblue">#00008b</color>
+    <color name="lightblue">#FF41F8E6</color>
+
+
+    <color name="dimgray">#696969</color>
+    <color name="snow">#F8F8FF</color>
+    <color name="gray">#808080</color>
+    <color name="purplepink">#BEF7056D</color>
+
+    <color name="yellow">#FF2F49FA</color>
+    <color name="yelloww">#FFFF00</color>
+    <color name="yellow3">#FFC300 </color>
+
+    <color name="purple">#800080</color>
+    <color name="oceanblue">#2F49FA</color>
+
+    <color name="voilet">#EE296D</color>
+
+    <color name="pink">#FFC0CB</color>
+    <color name="lightpink">#FFB6C1</color>
+    <color name="hotpink">#BEF7056D</color>
+
+    <color name="deeppink">#FF1493</color>
+
+    <color name="black1">#5c4a4a</color>
+    <color name="firebrick">#B22222</color>
+    <color name="darkred">#8B0000</color>
+    <color name="maroon">#800000</color>
+    <color name="xcolor">#463d47</color>
+
+
+    <color name="textColorPrimary">#3a414d</color>
+    <color name="textColorLight">#6f7c92</color>
+
+    <!-- Login -->
+    <color name="colorButton">#774df2</color>
+
+    <!-- Open Chat -->
+    <color name="openChatText">#47505d</color>
+    <color name="openChatNicknameOther">#3a414d</color>
+    <color name="openChatNicknameMe">#00BCD4</color>
+
+    <!-- Group Chat -->
+    <color name="groupChatBubbleMe">#774df2</color>
+    <color name="groupChatTextMe">#ffffff</color>
+    <color name="groupChatBubbleOther">#eef1f6</color>
+    <color name="groupChatTextOther">#000000</color>
+
+    <color name="groupChatReadReceiptMe">#1fcc94</color>
+    <color name="groupChatReadReceiptOther">#00BCD4</color>
+
+    <color name="groupChatAdminBackground">#e0fcff</color>
+    <color name="groupChatAdminText">#39474e</color>
+
+    <color name="groupChatDateText">#ffffff</color>
+    <color name="groupChatDateBackground">#C0C0C0</color>
+
+    <!-- Group Channel List -->
+    <color name="groupChannelUnreadCountBackground">#7d62df</color>
+    <color name="groupChannelUnreadCountText">#ffffff</color>
+
+    <!-- Selector -->
+    <color name="btn_create">#ffffff</color>
+    <color name="btn_create_disabled">#c1acff</color>
+    <color name="btn_edit">#ffffff</color>
+    <color name="btn_edit_disabled">#c1acff</color>
+    <color name="btn_send">#774df2</color>
+    <color name="btn_send_disabled">#8e8e8e</color>
+
+    <color name="color_white">#ffffff</color>
+
+
+
+</resources>

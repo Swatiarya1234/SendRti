@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_Home2">
+
+
+
+<!--    <fragemnt android:id ="@+id/nav_Apply"-->
+<!--        android:name="">-->
+
+<!--    </fragemnt>-->
+
+
+    <fragment
+        android:id="@+id/nav_Dashboard"
+        android:name="com.example.sendrti.ui.Dashboard.DashboardFragment"
+        android:label="@string/Dashboard"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id ="@+id/action_Funds"
+            app:popUpTo="@id/nav_deatilsofrti"
+            app:destination="@id/nav_deatilsofrti">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_SafeDeatils"
+            app:destination="@id/nav_safedeatils">
+
+        </action>
+
+
+
+
+
+
+         
+<!--        <action-->
+<!--            android:id="@+id/action_Funds"-->
+<!--            app:destination="@id/nav_home_funds" />-->
+<!--        -->
+<!--        <action android:id="@+id/action_incometax"-->
+<!--            app:destination="@+id/nav_home_incometax"/>-->
+
+<!--        <action android:id="@+id/action_answersheet"-->
+<!--            app:destination="@+id/nav_home_answer"/>-->
+
+<!--        <action android:id="@id/action_stausfir"-->
+<!--            app:destination="@id/nav_home_statusfir">-->
+
+<!--        </action>-->
+
+<!--        <action android:id="@id/action_passport"-->
+<!--            app:destination="@id/nav_home_passport">-->
+
+<!--        </action>-->
+
+<!--       <action android:id = "@id/action_marksheet"-->
+<!--           app:destination="@id/nav_home_marksheet">-->
+
+<!--       </action>-->
+
+<!--        <action android:id = "@id/action_property"-->
+<!--            app:destination="@id/nav_home_property">-->
+
+<!--        </action>-->
+
+<!--        <action android:id = "@id/action_cannotfind"-->
+<!--            app:destination="@id/nav_home_cannotfind">-->
+
+<!--        </action>-->
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_EmailQuery"
+        android:name="com.example.sendrti.EmailQuery.EmailQuery"
+        android:label="@string/EmailQuery"
+        tools:layout="@layout/email_query_fragment">
+    </fragment>
+    <fragment
+        android:id ="@+id/nav_details"
+        android:name="com.example.sendrti.MyRTI.Pakage.Appliactiondetails"
+        android:label="@string/ApplicationDetails"
+        tools:layout="@layout/appliaction_details_fragment">
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_frequently"
+        android:name="com.example.sendrti.MyRTI.Pakage.Appliactiondetails"
+        android:label="@string/ApplicationDetails"
+        tools:layout="@layout/appliaction_details_fragment">
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_faq"
+        android:name="com.example.sendrti.Faq.Faq"
+        android:label="@string/Faq"
+        tools:layout="@layout/faq_fragment">
+    </fragment>
+
+
+
+
+    <fragment
+        android:id ="@+id/nav_Query"
+        android:name="com.example.sendrti.Sendbird.Sendbird"
+        android:label="@string/Query"
+        tools:layout="@layout/chat_fragment_fragment">
+
+        <action
+                  android:id="@+id/action_ChatFrament"
+                    app:destination="@id/nav_ChatFragment" />
+
+                <argument
+                    android:name="myArg"
+                    app:argType="string" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pricing2"
+        android:name="com.example.sendrti.ui.pricing.pricing"
+        android:label="@string/pricing"
+        tools:layout="@layout/pricing_fragment">
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/nav_home_funds"
+        android:name="com.example.sendrti.ui.Funds.Funds"
+        android:label="@string/action_Funds"
+        tools:layout="@layout/funds_fragment">
+<!--        <action-->
+<!--            android:id="@+id/action_Funds"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+
+
+
+
+    <fragment
+        android:id="@+id/nav_home_incometax"
+        android:name="com.example.sendrti.ui.Incometax.IncomeTax"
+        android:label="@string/action_incometax"
+        tools:layout="@layout/income_tax_fragment">
+<!--        <action-->
+<!--            android:id="@+id/action_incometax"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/nav_home_answer"
+        android:name="com.example.sendrti.ui.answersheet.Answersheet"
+        android:label="@string/action_answer"
+        tools:layout="@layout/answersheet_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_answer"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_statusfir"
+        android:name="com.example.sendrti.ui.statusfir.statusfir"
+        android:label="@string/action_satusfir"
+        tools:layout="@layout/statusfir_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_stausfir"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home_marksheet"
+        android:name="com.example.sendrti.ui.marksheet.Marksheet"
+        android:label="@string/action_marksheet"
+        tools:layout="@layout/marksheet_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_marksheet"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_home_property"
+        android:name="com.example.sendrti.ui.property.property"
+        android:label="@string/action_property"
+        tools:layout="@layout/property_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_property"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_home_cannotfind"
+        android:name="com.example.sendrti.ui.passport.Passport"
+        android:label="@string/action_cannotfind"
+        tools:layout="@layout/cannotfind_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_cannotfind"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_myrti"
+        android:name="com.example.sendrti.MyRTI.MyRti"
+        android:label="@string/MyRti"
+        tools:layout="@layout/my_rti_fragment">
+
+        <!--        <action-->
+        <!--            android:id="@+id/action_cannotfind"-->
+        <!--            app:destination="@id/nav_home" />-->
+
+        <!--        <argument-->
+        <!--            android:name="myArg"-->
+        <!--            app:argType="string" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pricing"
+        android:name="com.example.sendrti.ui.passport.Passport"
+        android:label="@string/action_passport"
+        tools:layout="@layout/passport_fragment">
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_home_passport"
+        android:name="com.example.sendrti.ui.passport.Passport"
+        android:label="@string/action_passport"
+        tools:layout="@layout/passport_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_passport"-->
+<!--            app:destination="@id/nav_home" />-->
+
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_Home2"
+        android:name="com.example.sendrti.Home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/home_fragment"
+        >
+         <action
+             android:id ="@+id/action_Apply"
+             app:destination="@id/nav_home_Apply"
+             app:popUpTo="@id/nav_myRti"/>
+        <action
+            android:id ="@+id/action_Track2"
+            app:destination="@id/nav_home_track"
+            app:popUpTo="@id/nav_myRti"/>
+
+        <action
+            android:id ="@+id/action_contact"
+            app:destination="@id/nav_home_contact"
+            app:popUpTo="@id/nav_myRti">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_help"
+            app:destination="@id/nav_help"
+            app:popUpTo="@id/nav_myRti">
+
+        </action>
+
+
+
+
+
+<!--         <action-->
+<!--             android:id = "@+id/action_Track"-->
+<!--             app:destination="@id/nav_home_Track">-->
+
+<!--         </action>-->
+
+<!--    <action-->
+<!--        android:id = "@+id/action_Contact"-->
+<!--        app:destination="@+id/nav_home_Contact">-->
+
+<!--    </action>-->
+
+<!--     <action-->
+<!--        android:id = "@+id/action_Help"-->
+<!--        app:destination="@+id/nav_home_Help">-->
+
+<!--     </action>-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home_Apply"
+        android:name="com.example.sendrti.Home.ApplyNow.ApplyNow"
+        android:label="@string/action_ApplyNow"
+        tools:layout="@layout/apply_now_fragment">
+                <action
+                    android:id="@+id/action_Apply"
+                    app:popUpTo="@+id/nav_myRti"
+                    app:destination="@id/nav_myRti"/>
+
+                <argument
+                    android:name="myArg"
+                    app:argType="string" />
+
+               <action
+                   android:id = "@+id/action_deatilsofrti"
+                   app:popUpTo="@+id/nav_deatilsofrti"
+                   app:destination="@id/nav_deatilsofrti">
+               </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home_track"
+        android:name="com.example.sendrti.Home.Track.TrackFragment"
+        android:label="@string/Track"
+        tools:layout="@layout/track_fragment">
+        <action
+            android:id="@+id/action_Track2"
+            app:popUpTo="@+id/nav_myRti"
+            app:destination="@id/nav_myRti"/>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home_contact"
+        android:name="com.example.sendrti.Home.Contact.Contact"
+        android:label="@string/Contact"
+        tools:layout="@layout/track_fragment">
+        <action
+            android:id="@+id/action_contact"
+            app:popUpTo="@+id/nav_myRti"
+            app:destination="@id/nav_myRti"/>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id = "@+id/nav_deatilsofrti"
+        android:name="com.example.sendrti.ui.Dashboard.DetailsofRti.DeatilsofRti"
+        android:label="@string/action_ApplyNow"
+        tools:layout="@layout/deatilsof_rti_fragment">
+
+
+        <action
+            android:id ="@+id/action_answerheet"
+            app:destination="@id/nav_Answersheet"
+            app:popUpTo="@+id/nav_Answersheet">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_Marksheet"
+            app:destination="@id/nav_Marksheet"
+            app:popUpTo="@+id/nav_Marksheet">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_passport"
+            app:destination="@id/nav_passport"
+            app:popUpTo="@+id/nav_passport">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_property"
+            app:destination="@id/nav_property"
+            app:popUpTo="@+id/nav_property">
+
+        </action>
+        <action
+            android:id ="@+id/action_Incometax"
+            app:destination="@id/nav_Incometax"
+            app:popUpTo="@+id/nav_Incometax">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_firstatus"
+            app:destination="@id/nav_firstatus"
+            app:popUpTo="@+id/nav_firstatus">
+
+        </action>
+
+
+        <action
+           android:id ="@+id/action_deatilsofrti"
+           app:popUpTo="@+id/nav_home_Apply"
+           app:destination="@id/nav_home_Apply">
+
+       </action>
+        <action
+            android:id ="@+id/action_SafeDeatils"
+            app:destination="@id/nav_safedeatils"
+            app:popUpTo="@+id/nav_safedeatils">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_epf"
+            app:destination="@id/nav_Epf"
+            app:popUpTo="@+id/nav_Epf">
+
+        </action>
+
+        <action
+            android:id ="@+id/action_pension"
+            app:destination="@id/nav_pension"
+            app:popUpTo="@+id/nav_pension">
+
+        </action>
+
+
+    </fragment>
+
+
+
+    <fragment
+        android:id = "@+id/nav_notification"
+        android:name="com.example.sendrti.Notification.Notification"
+        android:label="@string/Notification"
+        tools:layout="@layout/notification_fragment">
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id = "@+id/nav_myRti"
+        android:name="com.example.sendrti.MyRTI.MyRti"
+        android:label="@string/MyRti"
+        tools:layout="@layout/my_rti_fragment">
+
+        <action
+            android:id ="@+id/action_Apply2"
+            app:destination="@id/nav_Home2"
+            app:popUpTo="@+id/nav_Home2"/>
+
+        <action
+            android:id ="@+id/action_Track2"
+            app:destination="@id/nav_Home2"
+            app:popUpTo="@+id/nav_Home2"/>
+
+        <action
+            android:id="@+id/action_contact"
+            app:destination="@id/nav_Home2"
+            app:popUpTo="@+id/nav_Home2">
+
+        </action>
+
+
+    </fragment>
+
+
+      <fragment
+          android:id ="@+id/nav_safedeatils"
+          android:name="com.example.sendrti.ui.Dashboard.SafeDetails.SafeDetails"
+          android:label="@string/Payments"
+          tools:layout="@layout/fragment_safe_details">
+
+
+          <action
+              android:id = "@+id/action_SafeDeatils"
+              app:destination="@id/nav_deatilsofrti"
+              app:popUpTo="@+id/nav_deatilsofrti">
+          </action>
+
+          <action
+              android:id = "@+id/action_dashboard"
+              app:destination="@id/nav_Dashboard"
+              app:popUpTo="@+id/nav_Dashboard">
+          </action>
+
+
+
+
+
+          <argument
+              android:name="myArg"
+              app:argType="string" />
+
+
+      </fragment>
+
+    <fragment
+        android:id = "@+id/nav_help"
+        android:name="com.example.sendrti.Home.Help.Help"
+        android:label="@string/Help"
+        tools:layout="@layout/help_fragment">
+
+        <action
+            android:id = "@+id/action_help"
+            app:destination="@id/nav_myRti"
+            app:popUpTo="@+id/nav_myRti">
+        </action>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id ="@+id/nav_Answersheet"
+        android:name="com.example.sendrti.ui.answersheet.Answersheet"
+        android:label="@string/Answersheet"
+        tools:layout="@layout/answersheet_fragment">
+
+
+        <action
+            android:id = "@+id/action_answerheet"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_Marksheet"
+        android:name="com.example.sendrti.ui.marksheet.Marksheet"
+        android:label="@string/Marksheet"
+        tools:layout="@layout/marksheet_fragment">
+
+
+        <action
+            android:id = "@+id/action_Marksheet"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_passport"
+        android:name="com.example.sendrti.ui.passport.Passport"
+        android:label="@string/Passport"
+        tools:layout="@layout/property_fragment">
+
+
+        <action
+            android:id = "@+id/action_passport"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id ="@+id/nav_Incometax"
+        android:name="com.example.sendrti.ui.Incometax.IncomeTax"
+        android:label="@string/Incometax"
+        tools:layout="@layout/income_tax_fragment">
+
+
+        <action
+            android:id = "@+id/action_Incometax"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_firstatus"
+        android:name="com.example.sendrti.ui.statusfir.statusfir"
+        android:label="@string/firstatus"
+        tools:layout="@layout/statusfir_fragment">
+
+
+        <action
+            android:id = "@+id/action_statusfir"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_property"
+        android:name="com.example.sendrti.ui.property.property"
+        android:label="@string/Property"
+        tools:layout="@layout/property_fragment">
+
+
+        <action
+            android:id = "@+id/action_property"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id ="@+id/nav_epf"
+        android:name="com.example.sendrti.ui.property.property"
+        android:label="@string/Property"
+        tools:layout="@layout/property_fragment">
+
+
+        <action
+            android:id = "@+id/action_property"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id ="@+id/nav_"
+        android:name="com.example.sendrti.ui.property.property"
+        android:label="@string/Property"
+        tools:layout="@layout/property_fragment">
+
+
+        <action
+            android:id = "@+id/action_property"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_Epf"
+        android:name="com.example.sendrti.ui.epf.epf"
+        android:label="@string/Epf"
+        tools:layout="@layout/epf_fragment">
+
+
+        <action
+            android:id = "@+id/action_epf"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id ="@+id/nav_pension"
+        android:name="com.example.sendrti.ui.Dashboard.pension.Pension"
+        android:label="@string/Pension"
+        tools:layout="@layout/pension_fragment">
+
+
+        <action
+            android:id = "@+id/action_pension"
+            app:destination="@id/nav_deatilsofrti"
+            app:popUpTo="@+id/nav_deatilsofrti">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_ChatFragment"
+        android:name="com.example.sendrti.Sendbird.OpenChatFragment"
+        android:label="@string/ChatFragment"
+        tools:layout="@layout/pension_fragment">
+
+        <action
+            android:id = "@+id/action_ChatFrament"
+            app:destination="@id/nav_Query"
+            app:popUpTo="@+id/nav_Query">
+        </action>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+
+    </fragment>
+
+
+
+
+</navigation>

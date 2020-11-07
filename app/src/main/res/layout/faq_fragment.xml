@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Faq.Faq">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="63dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/lightBlue">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li_gravity"
+            android:orientation="vertical"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/roundedrec">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+            <ToggleButton
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="23dp"
+                android:id="@+id/imagebtn"
+                android:textOff="@null"
+                android:textOn="@null"
+                android:textSize="0dp"
+                android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginBottom="23dp"
+                android:layout_marginRight="23dp">
+
+            </ToggleButton>
+
+
+
+
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/WHATISRTI"
+            android:gravity="center"
+            android:id="@+id/textView12"
+            android:layout_marginBottom="23dp"
+            android:textAlignment="gravity"
+            android:textSize="13dp"
+            android:layout_marginTop="23dp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="34dp">
+
+        </TextView>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/WHATISRTI"
+                android:gravity="center"
+                android:id="@+id/plustext1"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li_gravity12"
+            android:layout_marginLeft="23dp"
+            android:orientation="vertical"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/roundedrec">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="27dp"
+                    android:id="@+id/togglebutton2"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:textSize="0dp"
+                    android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginBottom="23dp"
+                    android:layout_marginRight="23dp">
+
+                </ToggleButton>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Wahtsisinformation"
+                android:gravity="center"
+                android:id="@+id/textView12"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="12dp"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pricing"
+                android:gravity="center"
+                android:id="@+id/plustext2"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li_gravity12"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:orientation="vertical"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/roundedrec">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+            <ToggleButton
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="23dp"
+                android:id="@+id/imagebtn2"
+                android:textOff="@null"
+                android:textOn="@null"
+                android:textSize="0dp"
+                android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginBottom="23dp"
+                android:layout_marginRight="23dp">
+
+            </ToggleButton>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/WHATISSENDRTI.COM"
+                android:gravity="center"
+                android:id="@+id/textview"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:layout_marginTop="27dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+            </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pricing"
+                android:gravity="center"
+                android:id="@+id/plustext4"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li_gravity12"
+            android:layout_marginLeft="23dp"
+            android:orientation="vertical"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/roundedrec">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <ToggleButton
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="23dp"
+                android:textOff="@null"
+                android:textOn="@null"
+                android:textSize="0dp"
+                android:id="@+id/togglebtn7"
+                android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginBottom="23dp"
+                android:layout_marginRight="23dp">
+
+            </ToggleButton>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/howwilliknow"
+                android:gravity="center"
+                android:id="@+id/textView23"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pricing"
+                android:gravity="center"
+                android:id="@+id/plustext9"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li_gravity12"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:orientation="vertical"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/roundedrec">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <ToggleButton
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginBottom="23dp"
+                android:layout_marginRight="23dp">
+
+            </ToggleButton>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/HOWDOESSENDRTI.COMWORK"
+                android:gravity="center"
+                android:id="@+id/textView12"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pricing"
+                android:gravity="center"
+                android:id="@+id/plustext9"
+                android:layout_marginBottom="23dp"
+                android:textAlignment="gravity"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="34dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/li_gravity12"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="48dp"
+                android:background="@drawable/roundedrec">
+
+
+                <ImageButton
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="23dp"
+                    android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginBottom="23dp"
+                    android:layout_marginRight="23dp">
+
+                </ImageButton>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/canyoursiteguarantee"
+                    android:gravity="center"
+                    android:id="@+id/textView12"
+                    android:layout_marginBottom="25dp"
+                    android:textAlignment="gravity"
+                    android:textSize="13dp"
+                    android:layout_marginTop="23dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="34dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

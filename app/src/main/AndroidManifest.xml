@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sendrti">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- READ/WRITE_EXTERNAL_STORAGE permissions are required to upload or download files from/into external storage. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.property.Property2"></activity>
+        <activity android:name=".PrefrenceUtil.UrlPreviewInf" />
+        <activity android:name=".PrefrenceUtil.TypingIndicato" />
+        <activity android:name=".PrefrenceUtil.TextUtil" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.UplaodRelevantAttachment.UplaodRelevantAttachment3" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.UplaodRelevantAttachment.Upload" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.PaymentInvoice.Paymentinvoic" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.MyRtiApplication.MyRtiApplicatio" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.EdityourProfile.Edityourprofil" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.Downloadyourapi.Downloadyouapi" />
+        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.AppliactionStatus.ApplicationStatu" />
+        <activity android:name=".ui.passport.Passpor" />
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".LoginwithSendBird.SendBird" />
+        <activity
+            android:name=".Splashscreen.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainActivity2"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Sendbird.CreateOpenChannelActivity" />
+    </application>
+
+</manifest>
