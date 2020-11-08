@@ -74,26 +74,11 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         setContentView(R.layout.activity_send_rti_splashscreen);
         signInButton = findViewById(R.id.googleSignin);
 
-        firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         PrefrenceUtil.init(getApplicationContext());
        // SendBird.init(getApplication());
-
-
-      //  SendBird.init(getApplication());
-
-          // SendBird.init(getApplication());
-          //SendBird.init(getApplication());
-
-       // SendBird.init(getApplication());
-
-       // SendBird.init(getApplication())
-
-
-
-
-        firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
-
+        
         //this is where we start the Auth state Listener to listen for whether the user is signed in or not
         authStateListener = new FirebaseAuth.AuthStateListener(){
             @Override
@@ -130,22 +115,6 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
                 startActivityForResult(intent,RC_SIGN_IN);
             }
         });
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent intent = Auth.GoogleSignInApi.getSignInIntent(goo)
-              //  Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient)
-            }
-        });
-
-
-
-//        signInButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
 
         continuewasguest = findViewById(R.id.continueasguest);
         continuewasguest.setOnClickListener(new View.OnClickListener() {
@@ -216,9 +185,9 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-        PrefrenceUtil.setUserId(user.getEmail());
-        PrefrenceUtil.setNickname(user.getDisplayName());
-        connectToSendBird(user.getEmail(), user.getDisplayName());
+//        PrefrenceUtil.setUserId(user.getEmail());
+//        PrefrenceUtil.setNickname(user.getDisplayName());
+//        connectToSendBird(user.getEmail(), user.getDisplayName());
 
         Intent intent = new Intent(getApplication(), MainActivity.class);
         intent.putExtra("Username",user.getDisplayName
