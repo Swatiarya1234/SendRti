@@ -15,16 +15,16 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.sendrti.R;
 
-public class Faq2 extends Fragment implements View.OnClickListener {
+public class Faq extends Fragment implements View.OnClickListener {
 
     //later remove the class name
-    private Faq2ViewModel mViewModel;
+    private FaqViewModel mViewModel;
     private TextView getView;
     private ToggleButton plusbutton, Plusbutton2, plusbutton3, plusbutton4, plusbutton5;
     private TextView textView, textView2, textView3, textView4;
 
-    public static Faq2 newInstance() {
-        return new Faq2();
+    public static Faq newInstance() {
+        return new Faq();
     }
 
     @Override
@@ -57,7 +57,7 @@ public class Faq2 extends Fragment implements View.OnClickListener {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(Faq2ViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(FaqViewModel.class);
         // TODO: Use the ViewModel
     }
 

@@ -336,7 +336,7 @@
 
     <fragment
         android:id="@+id/nav_home_Apply"
-        android:name="com.example.sendrti.Home.ApplyNow.ApplyNow"
+        android:name="com.example.sendrti.Home.ApplyNow.Applynow"
         android:label="@string/action_ApplyNow"
         tools:layout="@layout/apply_now_fragment">
                 <action

@@ -7,7 +7,7 @@
     android:layout_marginLeft="13dp"
     android:layout_marginRight="13dp"
     android:layout_marginTop="23dp"
-    android:background="@drawable/backgroundapplynow">
+    android:background="@drawable/roundedrec">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,7 +121,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textsize2"
+                    android:id="@+id/number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -147,7 +147,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/date2"
+                        android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sep 20"

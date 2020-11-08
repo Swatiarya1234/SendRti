@@ -12,24 +12,24 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.sendrti.R;
 
-public class Applynow2 extends Fragment {
+public class Applynow extends Fragment {
 
-    private Applynow2ViewModel mViewModel;
+    private ApplynowViewModel mViewModel;
 
-    public static Applynow2 newInstance() {
-        return new Applynow2();
+    public static Applynow newInstance() {
+        return new Applynow();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.applynow2_fragment, container, false);
+        return inflater.inflate(R.layout.apply_now_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(Applynow2ViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(ApplynowViewModel.class);
         // TODO: Use the ViewModel
     }
 

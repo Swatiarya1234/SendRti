@@ -78,7 +78,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
         PrefrenceUtil.init(getApplicationContext());
        // SendBird.init(getApplication());
-        
+
         //this is where we start the Auth state Listener to listen for whether the user is signed in or not
         authStateListener = new FirebaseAuth.AuthStateListener(){
             @Override
@@ -125,10 +125,6 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
             }
         });
 
-
-
-
-      //  continuewasguest.setOnClickListener(new);
 
     }
 
@@ -283,10 +279,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
     private void showSnackbar(String text) {
 
-       // Snackbar snackbar = Snakbar.make(mLoginLayout,text,Snackbar.LENGTH_SHORT)
-//        Snackbar snackbar = Snackbar.make(mLoginLayout, text, Snackbar.LENGTH_SHORT);
-//
-//        snackbar.show();
+
     }
 
     // Shows or hides the ProgressBar
