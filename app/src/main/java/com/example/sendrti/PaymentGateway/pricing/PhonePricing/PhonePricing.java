@@ -1,4 +1,4 @@
-package com.example.sendrti.ui.pricing.Email;
+package com.example.sendrti.PaymentGateway.pricing.PhonePricing;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.example.sendrti.R;
 
-public class Email extends Fragment {
+public class PhonePricing extends Fragment {
 
-    private EmailViewModel mViewModel;
+    private PhonePricingViewModel mViewModel;
 
-    public static Email newInstance() {
-        return new Email();
+    public static PhonePricing newInstance() {
+        return new PhonePricing();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.email_fragment, container, false);
+        return inflater.inflate(R.layout.phone_pricing_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(EmailViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(PhonePricingViewModel.class);
         // TODO: Use the ViewModel
     }
 

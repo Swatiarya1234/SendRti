@@ -1,4 +1,4 @@
-package com.example.sendrti.savepayments;
+package com.example.sendrti.PaymentGateway.savepayments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

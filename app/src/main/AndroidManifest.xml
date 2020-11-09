@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.property.Property2"></activity>
+        <activity android:name=".PaymentGateway.pricing.EmailPricing.EmailActivity"></activity>
+        <activity android:name=".ui.property.Property2" />
         <activity android:name=".PrefrenceUtil.UrlPreviewInf" />
         <activity android:name=".PrefrenceUtil.TypingIndicato" />
         <activity android:name=".PrefrenceUtil.TextUtil" />
@@ -40,6 +41,10 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Sendbird.CreateOpenChannelActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
     </application>
 
 </manifest>

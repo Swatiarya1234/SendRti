@@ -124,9 +124,25 @@
 
     <fragment
         android:id="@+id/nav_pricing2"
-        android:name="com.example.sendrti.ui.pricing.pricing"
+        android:name="com.example.sendrti.PaymentGateway.pricing.pricing"
         android:label="@string/pricing"
         tools:layout="@layout/pricing_fragment">
+                <action
+                   android:id="@+id/action_pricing"
+                    app:destination="@id/nav_myrti" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_pricing"
+        android:name="com.example.sendrti.PaymentGateway.pricing.pricing"
+        android:label="@string/pricing"
+        tools:layout="@layout/pricing_fragment">
+        <action
+            android:id="@+id/action_pricing"
+            app:destination="@id/nav_myrti" />
+
     </fragment>
 
 
@@ -248,6 +264,12 @@
         android:name="com.example.sendrti.MyRTI.MyRti"
         android:label="@string/MyRti"
         tools:layout="@layout/my_rti_fragment">
+
+        <action
+            android:id="@+id/action_pricing"
+            app:destination="@id/nav_pricing2" />
+
+
 
         <!--        <action-->
         <!--            android:id="@+id/action_cannotfind"-->

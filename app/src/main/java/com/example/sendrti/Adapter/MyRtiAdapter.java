@@ -4,11 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sendrti.ModelClass.ChatModel;
@@ -52,6 +54,13 @@ public class MyRtiAdapter extends RecyclerView.Adapter<MyRtiAdapter.MyViewholder
          holder.month.setText(movie.getMonth());
          holder.status.setText(movie.getStatus());
          holder.data.setText(movie.getDate());
+         holder.btn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Navigation.findNavController(v).navigate(R.id.nav_pricing2);
+             }
+         });
+
 
     }
 
@@ -64,6 +73,7 @@ public class MyRtiAdapter extends RecyclerView.Adapter<MyRtiAdapter.MyViewholder
         private TextView status;
         private TextView data;
         private TextView month;
+        private Button btn;
 
         public MyViewholder(@NonNull View itemView) {
 
@@ -72,6 +82,7 @@ public class MyRtiAdapter extends RecyclerView.Adapter<MyRtiAdapter.MyViewholder
             data = itemView.findViewById(R.id.number);
             month = itemView.findViewById(R.id.date);
             rtiApplication = itemView.findViewById(R.id.Rtiappliaction);
+            btn = itemView.findViewById(R.id.Paynow);
         }
 
 

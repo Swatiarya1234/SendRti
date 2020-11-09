@@ -187,7 +187,7 @@
                 >
 
                 <Button
-                    android:id="@+id/textsize6"
+                    android:id="@+id/Paynow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pay Now"

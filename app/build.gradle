@@ -40,6 +40,7 @@ dependencies {
     implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.149'
     implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.149'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.google.android.gms:play-services-wallet:18.0.0'
     // For control over item selection of both touch and mouse driven selection
 
 

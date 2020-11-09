@@ -1,4 +1,4 @@
-package com.example.sendrti.ui.pricing.Email;
+package com.example.sendrti.PaymentGateway.pricing.Email;
 
 import androidx.lifecycle.ViewModel;
 

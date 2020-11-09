@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".savepayments.SavePaymentInfo">
+    tools:context=".PaymentGateway.savepayments.SavePaymentInfo">
 
     <TextView
         android:layout_width="match_parent"

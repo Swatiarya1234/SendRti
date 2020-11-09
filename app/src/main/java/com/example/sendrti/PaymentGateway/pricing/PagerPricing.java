@@ -1,15 +1,12 @@
-package com.example.sendrti.ui.pricing;
+package com.example.sendrti.PaymentGateway.pricing;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.sendrti.ui.Dashboard.AppliactionDetails.ApplicationDetails;
-import com.example.sendrti.ui.Dashboard.DetailsofRti.DeatilsofRti;
-import com.example.sendrti.ui.Dashboard.SafeDetails.SafeDetails;
-import com.example.sendrti.ui.pricing.Email.Email;
-import com.example.sendrti.ui.pricing.Phone.Phone;
+import com.example.sendrti.PaymentGateway.pricing.Email.Email;
+import com.example.sendrti.PaymentGateway.pricing.Phone.Phone;
 
 public class PagerPricing extends FragmentStatePagerAdapter {
 
