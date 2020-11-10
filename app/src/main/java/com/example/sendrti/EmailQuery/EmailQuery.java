@@ -18,6 +18,7 @@ public class EmailQuery extends Fragment {
 
     private EmailQueryViewModel mViewModel;
 
+
     public static EmailQuery newInstance() {
         return new EmailQuery();
     }
@@ -25,7 +26,8 @@ public class EmailQuery extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.email_query_fragment, container, false);
+        View view = inflater.inflate(R.layout.email_query_fragment, container, false);
+        return view;
     }
 
     @Override
