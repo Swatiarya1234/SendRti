@@ -27,7 +27,8 @@
           <EditText
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:id="@+id/username">
+              android:id="@+id/username"
+              android:text="@string/username">
           </EditText>
 
         </LinearLayout>
@@ -44,7 +45,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/password">
+                android:id="@+id/password"
+                android:text="@string/password">
             </EditText>
 
         </LinearLayout>
@@ -61,7 +63,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/email">
+                android:id="@+id/email"
+                android:text="@string/Email">
             </EditText>
 
         </LinearLayout>

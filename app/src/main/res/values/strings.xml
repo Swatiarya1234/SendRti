@@ -10,6 +10,7 @@
     <string name="action_incometax">Incometax</string>
     <string name="APP_ID">85EDE223-00FF-44FB-8F32-BFE6D0DE953D</string>
     <string name="all_app_version">Sample UI v%1$s / SDK v%2$s</string>
+    <string name="clientid">432050171493-gdc6jmkbfccrkajo4795pbmmc6ud6uqp.apps.googleusercontent.com</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -51,7 +52,7 @@
     <string name="Name">Name</string>
     <string name="Message">Message</string>
     <string name="MyRTI">MyRti</string>
-    <string name="RtiAppliactionNumber">Rti Appliaction Number :</string>
+    <string name="RtiAppliactionNumber">Rti Application Number :</string>
     <string name="Home">Home</string>
     <string name="Logout">Logout</string>
     <string name="ApplicationDetails">ApplicationDetails</string>
@@ -86,5 +87,7 @@
     <string name="login_user_id">loginwithuser</string>
     <string name="login_user_nickname">loginusernickname</string>
     <string name="menu_Query">Query</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
 
 </resources>

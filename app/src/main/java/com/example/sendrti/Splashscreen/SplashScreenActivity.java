@@ -92,10 +92,12 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
             }
         };
 
+
         GoogleSignInOptions gso =  new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))//you can also use R.string.default_web_client_id
                 .requestEmail()
                 .build();
+
         googleApiClient=new GoogleApiClient.Builder(this)
                 .enableAutoManage(this,this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
@@ -113,6 +115,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         continuewasguest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
             }
@@ -125,7 +128,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
                startActivity(intent);
             }
         });
-        
+
 
 
 
@@ -143,6 +146,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
     private void handleSignInResult(GoogleSignInResult result){
         if(result.isSuccess()){
+
             GoogleSignInAccount account = result.getSignInAccount();
             idToken = account.getIdToken();
             name = account.getDisplayName();
@@ -188,15 +192,17 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 //        PrefrenceUtil.setNickname(user.getDisplayName());
 //        connectToSendBird(user.getEmail(), user.getDisplayName());
 
-        Intent intent = new Intent(getApplication(), MainActivity.class);
-        intent.putExtra("Username",user.getDisplayName
-                ());
-        intent.putExtra("Email",user.getEmail());
-        Uri personPhoto = user.getPhotoUrl();
-        intent.putExtra("Pic",personPhoto);
 
-        Log.d("Username",user.getDisplayName());
-        Log.d("Email",user.getEmail());
+        Intent intent = new Intent(getApplication(), MainActivity.class);
+//        intent.putExtra("Username",user.getDisplayName());
+//        intent.putExtra("Email",user.getEmail());
+        Bundle data1 = new Bundle();
+        data1.putString("Username",user.getDisplayName());
+        data1.putString("Email",user.getEmail());
+        data1.putString(" GooglepayUsername","Paymentgateway");
+        intent.putExtras(data1);
+//        Log.d("Username",user.getDisplayName());
+//        Log.d("Email",user.getEmail());
         //Log.d("Pic",user.getPhotoUrl().toString());
         startActivity(intent);
         // [START_EXCLUDE]

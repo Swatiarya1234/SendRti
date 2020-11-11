@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,12 +28,14 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private NavController navController;
-    private TextView textview,textview3;
-    private ImageView imageview;
+    private TextView name,emailAddress;
+    private ImageView profilePic;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -44,38 +47,101 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-        textview = (TextView) headerView.findViewById(R.id.name);
-        textview3 = (TextView)headerView.findViewById(R.id.emailaddress);
-        imageview = (ImageView) headerView.findViewById(R.id.imageView);
-
-        Intent intent = getIntent();
-        String id = intent.getStringExtra("Username");
-        String idname = intent.getStringExtra("Email");
-
-        Intent intent1 = getIntent();
-        String id2 = intent.getStringExtra("name");
-        String email = intent.getStringExtra("Email");
-
-
+        name = (TextView) headerView.findViewById(R.id.name);
+        emailAddress = (TextView)headerView.findViewById(R.id.emailaddress);
+        profilePic = (ImageView) headerView.findViewById(R.id.imageView);
         PrefrenceUtil.init(getApplicationContext());
-        textview.setText(id);
-        textview3.setText(idname);
-        firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser account = firebaseAuth.getCurrentUser();
 
-        try{
-            
-            assert account != null;
-            Uri uri = account.getPhotoUrl();
-            Glide.with(this).load(uri).apply(new RequestOptions()
-                    .placeholder(R.mipmap.ic_launcher)
-                    .fitCenter())
-                    .into(imageview);
-         //   imageview.setBackgroundResource(uri);
+
+// getting the bundle back from the android
+        Bundle bundle = getIntent().getExtras();
+
+
+
+// getting the string back;
+        if(bundle != null){
+            String type = bundle.getString("key");
+            if(type != null) {
+                if (type.contains("Sendbirdtype")) {
+
+                    String nickname = bundle.getString("nickname");
+                    String email = bundle.getString("email");
+                    emailAddress.setText(email);
+                    name.setText(nickname);
+
+
+                }
+
+            }
+
         }
-        catch (NullPointerException e){
-            Toast.makeText(getApplicationContext(),"image not found",Toast.LENGTH_LONG).show();
-        }
+
+      String type2 = bundle.getString("GooglepayUsername");
+
+
+
+//            Intent intent1 = getIntent();
+//            String id2 = intent1.getStringExtra("Username");
+//            String email = intent1.getStringExtra("Email");
+//            startActivity(intent1);
+//            textview.setText(id2);
+//            textview3.setText(email);
+
+
+
+
+
+       // String loginwithmail = getIntent().getStringExtra("loginwithemail");
+       // String loginwithguest = getIntent().getStringExtra("loginwithguest");
+
+
+
+
+
+//        assert sendbirdtype != null;
+//        if(sendbirdtype.equals("intent")) {
+//
+//           String id = PrefrenceUtil.getUserId();
+//           String nickname = PrefrenceUtil.getUserId();
+//           textview.setText(id);
+//           textview3.setText(nickname);
+//        }
+//
+//        assert loginwithmail != null;
+//        if(loginwithmail.equals("googlelogin")){
+//
+//            String id = getIntent().getStringExtra("Username");
+//            String nickname = getIntent().getStringExtra("Email");
+//            textview.setText(id);
+//            textview3.setText(nickname);
+//            firebaseAuth = FirebaseAuth.getInstance();
+//            FirebaseUser account = firebaseAuth.getCurrentUser();
+//
+//            try{
+//
+//                assert account != null;
+//                Uri uri = account.getPhotoUrl();
+//                Glide.with(this).load(uri).apply(new RequestOptions()
+//                        .placeholder(R.mipmap.ic_launcher)
+//                        .fitCenter())
+//                        .into(imageview);
+//                //   imageview.setBackgroundResource(uri);
+//            }
+//            catch (NullPointerException e){
+//                Toast.makeText(getApplicationContext(),"image not found",Toast.LENGTH_LONG).show();
+//            }
+//        }
+
+
+
+
+        //String name = getPackageName();
+
+
+
+//        textview.setText(id);
+//        textview3.setText(idname);
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_Home2, R.id.nav_myrti, R.id.nav_Dashboard, R.id.nav_Query, R.id.nav_EmailQuery, R.id.nav_pricing2)
                 .setDrawerLayout(drawer)
                 .build();

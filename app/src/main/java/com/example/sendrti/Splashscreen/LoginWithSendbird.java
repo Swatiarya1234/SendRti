@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,8 +46,6 @@ public class LoginWithSendbird extends AppCompatActivity {
 
                     PrefrenceUtil.setUserId(email.getText().toString());
                     PrefrenceUtil.setNickname(name.getText().toString());
-                    Intent intent = new Intent(getApplication(), MainActivity.class);
-                    startActivity(intent);
                     connectToSendBird(email.getText().toString(), name.getText().toString());
                 }
                 else
@@ -59,7 +58,7 @@ public class LoginWithSendbird extends AppCompatActivity {
         email.setSelectAllOnFocus(true);
     }
 
-    private void connectToSendBird(String userId, final String userNickname) {
+    private void connectToSendBird(final String userId, final String userNickname) {
         if (TextUtils.isEmpty(userId) || TextUtils.isEmpty(userNickname)) {
             return;
         }
@@ -88,9 +87,12 @@ public class LoginWithSendbird extends AppCompatActivity {
                 // Update the user's nickname
                 updateCurrentUserInfo(userNickname);
                 //PushUtils2.registerPushHandler(new MyFirebaseMessagingService());
-
-                // Proceed to MainActivity
                 Intent intent = new Intent(getApplication(), MainActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("key", "Sendbirdtype");
+                bundle.putString("nickname",userNickname);
+                bundle.putString("email",userId);
+                intent.putExtras(bundle);
                 startActivity(intent);
                 finish();
             }
