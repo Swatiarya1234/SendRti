@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginwithSendBird.SendBird">
+    android:layout_marginLeft="23dp"
+    android:layout_marginRight="23dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Splashscreen.LoginWithSendbird">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/li_layout2"
-        android:orientation="vertical"
-        android:layout_marginLeft="23dp"
-        android:layout_marginRight="23dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginBottom="67dp">
+
+
 
 
 
@@ -23,13 +20,14 @@
             android:layout_width="match_parent"
             android:layout_height="78dp"
             android:background="@drawable/backgroundblack"
-            android:layout_marginTop="78dp"
+            android:layout_marginTop="11dp"
             android:layout_marginLeft="34dp"
             android:layout_marginRight="34dp">
 
           <EditText
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:id="@+id/username">
           </EditText>
 
         </LinearLayout>
@@ -38,13 +36,32 @@
             android:layout_width="match_parent"
             android:layout_height="78dp"
             android:background="@drawable/backgroundblack"
-            android:layout_marginTop="78dp"
+            android:layout_marginTop="23dp"
             android:layout_marginLeft="34dp"
             android:layout_marginRight="34dp">
 
+
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/password">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:background="@drawable/backgroundblack"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/email">
             </EditText>
 
         </LinearLayout>
@@ -53,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="78dp"
             android:background="@drawable/backgroundapplynow"
-            android:layout_marginTop="78dp"
+            android:layout_marginTop="28dp"
             android:layout_marginLeft="34dp"
             android:layout_marginRight="34dp">
 
@@ -61,19 +78,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#00ccff"
+                android:id="@+id/sendbird"
                 android:text="LOGIN WITH SENDBIRD">
 
             </Button>
-
-
 
         </LinearLayout>
 
 
 
-    </LinearLayout>
 
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

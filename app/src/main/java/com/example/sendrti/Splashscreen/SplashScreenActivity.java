@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.sendbird.android.SendBird;
 
 import com.example.sendrti.PrefrenceUtil.PrefrenceUtil;
 import com.example.sendrti.R;
@@ -32,7 +33,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.sendbird.android.SendBird;
 import com.sendbird.android.SendBirdException;
 import com.sendbird.android.User;
 
@@ -43,26 +43,19 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
     public static final String VERSION="3.0.40";
     private String Tag = "Swati";
     private static final String TAG = "LoginActivity";
-
-    GoogleSignInClient googleSignInClient;
-
     private FirebaseAuth firebaseAuth;
 
    // private SignInButton signInButton;
     private GoogleApiClient googleApiClient;
     String name, email;
     String idToken;
+    private TextView sendbird;
     private FirebaseAuth.AuthStateListener authStateListener;
-    public ImageButton btn;
-    public ImageButton getGetLogin;
-    public ImageButton imageButton2;
-    public ImageButton imageButton;
-    private GoogleSignInClient mGoogleSignInClient;
     //private GoogleSignInAccount mGoogleSignInClient;
     private RelativeLayout mLoginLayout;
     private TextView continuewasguest;
     private Button signInButton;
-    private TextView SendBird;
+
 
 
 
@@ -73,11 +66,11 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_rti_splashscreen);
         signInButton = findViewById(R.id.googleSignin);
+        sendbird = findViewById(R.id.sendbird);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
         PrefrenceUtil.init(getApplicationContext());
-       // SendBird.init(getApplication());
 
         //this is where we start the Auth state Listener to listen for whether the user is signed in or not
         authStateListener = new FirebaseAuth.AuthStateListener(){
@@ -124,6 +117,16 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
                 startActivity(intent);
             }
         });
+        sendbird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               Intent intent = new Intent(getApplication(),LoginWithSendbird.class);
+               startActivity(intent);
+            }
+        });
+        
+
 
 
     }
@@ -256,25 +259,25 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
     private void updateCurrentUserInfo(final String userNickname) {
 
-//        SendBird.updateCurrentUserInfo(userNickname, null, new SendBird.UserInfoUpdateHandler() {
-//            @Override
-//            public void onUpdated(SendBirdException e) {
-//                if (e != null) {
-//                    // Error!
-//                    Toast.makeText(
-//                            getApplicationContext(), "" + e.getCode() + ":" + e.getMessage(),
-//                            Toast.LENGTH_SHORT)
-//                            .show();
-//
-//                    // Show update failed snackbar
-//                    showSnackbar("Update user nickname failed");
-//
-//                    return;
-//                }
-//
-//                PrefrenceUtil.setNickname(userNickname);
-//            }
-//        });
+        SendBird.updateCurrentUserInfo(userNickname, null, new SendBird.UserInfoUpdateHandler() {
+            @Override
+            public void onUpdated(SendBirdException e) {
+                if (e != null) {
+                    // Error!
+                    Toast.makeText(
+                            getApplicationContext(), "" + e.getCode() + ":" + e.getMessage(),
+                            Toast.LENGTH_SHORT)
+                            .show();
+
+                    // Show update failed snackbar
+                    showSnackbar("Update user nickname failed");
+
+                    return;
+                }
+
+                PrefrenceUtil.setNickname(userNickname);
+            }
+        });
     }
 
     private void showSnackbar(String text) {

@@ -352,6 +352,7 @@
 
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -364,7 +365,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:textSize="14dp"
-                android:id="@+id/continueasguest2"
+                android:id="@+id/sendbird"
                 android:layout_marginTop="18sp"
                 android:layout_gravity="center"
                 android:background="#00d2ff"

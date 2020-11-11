@@ -45,6 +45,7 @@ public class Sendbird extends Fragment {
     private SwipeRefreshLayout mSwipeRefresh;
     private FloatingActionButton mCreateChannelFab;
 
+
     private OpenChannelListQuery mChannelListQuery;
 
     public static Sendbird newInstance() {

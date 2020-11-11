@@ -15,6 +15,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".PaymentGateway.pricing.EmailPricing.EmailActivity"></activity>
         <activity android:name=".ui.property.Property2" />
+        <activity android:name=".Splashscreen.LoginWithSendbird"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+    </activity>
         <activity android:name=".PrefrenceUtil.UrlPreviewInf" />
         <activity android:name=".PrefrenceUtil.TypingIndicato" />
         <activity android:name=".PrefrenceUtil.TextUtil" />
@@ -26,7 +31,6 @@
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.Downloadyourapi.Downloadyouapi" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.AppliactionStatus.ApplicationStatu" />
         <activity android:name=".ui.passport.Passpor" />
-        <activity android:name=".LoginwithSendBird.SendBird" />
         <activity
             android:name=".Splashscreen.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">

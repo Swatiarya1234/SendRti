@@ -52,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
         String id = intent.getStringExtra("Username");
         String idname = intent.getStringExtra("Email");
 
+        Intent intent1 = getIntent();
+        String id2 = intent.getStringExtra("name");
+        String email = intent.getStringExtra("Email");
+
+
         PrefrenceUtil.init(getApplicationContext());
         textview.setText(id);
         textview3.setText(idname);
