@@ -42,7 +42,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.activity_image_imageleft, parent, false);
                 return new MyViewHolder(view);
+
             case ChatModel.SENDERTYPE:
+
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_image_imageright, parent, false);
                 return new MyViewHolder2(view);
 

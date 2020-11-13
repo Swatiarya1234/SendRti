@@ -68,7 +68,6 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         sendbird = findViewById(R.id.sendbird);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
         PrefrenceUtil.init(getApplicationContext());
 
         //this is where we start the Auth state Listener to listen for whether the user is signed in or not
@@ -105,6 +104,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
                 startActivityForResult(intent,RC_SIGN_IN);
             }

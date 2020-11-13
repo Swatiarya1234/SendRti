@@ -61,31 +61,33 @@ public class MainActivity extends AppCompatActivity {
                     String email = bundle.getString("email");
                     emailAddress.setText(email);
                     name.setText(nickname);
+
                 }
             }
 
             if(type != null){
                 if(type.contains("Paymentgateway"))
                 {
-                    String nickname = bundle.getString("Username");
-                    String email = bundle.getString("Email");
-                    emailAddress.setText(email);
-                    name.setText(nickname);
-                    firebaseAuth = FirebaseAuth.getInstance();
-                    FirebaseUser account = firebaseAuth.getCurrentUser();
+                       String nickname = bundle.getString("Username");
+                       String email = bundle.getString("Email");
+                       emailAddress.setText(email);
+                       name.setText(nickname);
+                       Menu nav_Menu = navigationView.getMenu();
+                       nav_Menu.findItem(R.id.nav_Query).setVisible(false);
+                       firebaseAuth = FirebaseAuth.getInstance();
+                       FirebaseUser account = firebaseAuth.getCurrentUser();
 
-            try{
-
-                assert account != null;
-                Uri uri = account.getPhotoUrl();
-                Glide.with(this).load(uri).apply(new RequestOptions()
-                        .placeholder(R.mipmap.ic_launcher)
-                        .fitCenter())
-                        .into(profilePic);
+                     try{
+                              assert account != null;
+                              Uri uri = account.getPhotoUrl();
+                              Glide.with(this).load(uri).apply(new RequestOptions()
+                              .placeholder(R.mipmap.ic_launcher)
+                              .fitCenter())
+                              .into(profilePic);
                 //   imageview.setBackgroundResource(uri);
-            }
+                       }
             catch (NullPointerException e){
-                Toast.makeText(getApplicationContext(),"image not found",Toast.LENGTH_LONG).show();
+                         Toast.makeText(getApplicationContext(),"image not found",Toast.LENGTH_LONG).show();
                   }
                 }
             }
@@ -96,9 +98,13 @@ public class MainActivity extends AppCompatActivity {
                     String nickname = bundle.getString("User");
                     name.setText(nickname);
                     emailAddress.setVisibility(View.GONE);
+                    Menu nav_Menu = navigationView.getMenu();
+                    nav_Menu.findItem(R.id.nav_Query).setVisible(false);
+
                 }
             }
         }
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_Home2, R.id.nav_myrti, R.id.nav_Dashboard, R.id.nav_Query, R.id.nav_EmailQuery, R.id.nav_pricing2)
                 .setDrawerLayout(drawer)
                 .build();
@@ -109,11 +115,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(getApplication(), SplashScreenActivity.class);
-                startActivity(intent);
-                return true;
+                  FirebaseAuth.getInstance().signOut();
+                  Intent intent = new Intent(getApplication(), SplashScreenActivity.class);
+                  startActivity(intent);
+                  return true;
             }
+
         });
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -125,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.mainnavcontroller, menu);
+
         return true;
     }
     @Override

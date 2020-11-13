@@ -73,7 +73,7 @@ public class LoginWithSendbird extends AppCompatActivity {
                 if (e != null) {
                     // Error!
                     Toast.makeText(
-                            getApplicationContext(), "" + e.getCode() + ": " + e.getMessage(),
+                            getApplicationContext(), "Login to SendBird failed" + e.getCode() + ": " + e.getMessage(),
                             Toast.LENGTH_SHORT)
                             .show();
 
@@ -82,12 +82,12 @@ public class LoginWithSendbird extends AppCompatActivity {
                     return;
                 }
 
-                PrefrenceUtil.setConnected(true);
+                   PrefrenceUtil.setConnected(true);
 
                 // Update the user's nickname
-                updateCurrentUserInfo(userNickname);
+                  updateCurrentUserInfo(userNickname);
                 //PushUtils2.registerPushHandler(new MyFirebaseMessagingService());
-                Intent intent = new Intent(getApplication(), MainActivity.class);
+                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("key", "Sendbirdtype");
                 bundle.putString("nickname",userNickname);
@@ -95,6 +95,7 @@ public class LoginWithSendbird extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivity(intent);
                 finish();
+
             }
         });
     }

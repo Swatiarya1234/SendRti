@@ -57,6 +57,7 @@ public class MyRtiAdapter extends RecyclerView.Adapter<MyRtiAdapter.MyViewholder
          holder.btn.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+
                  Navigation.findNavController(v).navigate(R.id.nav_pricing2);
              }
          });
