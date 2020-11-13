@@ -51,7 +51,6 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
     String idToken;
     private TextView sendbird;
     private FirebaseAuth.AuthStateListener authStateListener;
-    //private GoogleSignInAccount mGoogleSignInClient;
     private RelativeLayout mLoginLayout;
     private TextView continuewasguest;
     private Button signInButton;
@@ -117,6 +116,10 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplication(), MainActivity.class);
+                Bundle data1 = new Bundle();
+                data1.putString("User","Guest");
+                data1.putString("key","continueasguest");
+                intent.putExtras(data1);
                 startActivity(intent);
             }
         });
@@ -139,6 +142,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==RC_SIGN_IN){
+
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
         }
@@ -187,23 +191,13 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
 
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-
-//        PrefrenceUtil.setUserId(user.getEmail());
-//        PrefrenceUtil.setNickname(user.getDisplayName());
-//        connectToSendBird(user.getEmail(), user.getDisplayName());
-
-
         Intent intent = new Intent(getApplication(), MainActivity.class);
-//        intent.putExtra("Username",user.getDisplayName());
-//        intent.putExtra("Email",user.getEmail());
         Bundle data1 = new Bundle();
         data1.putString("Username",user.getDisplayName());
+       // Log.d("username",user.getDisplayName());
         data1.putString("Email",user.getEmail());
-        data1.putString(" GooglepayUsername","Paymentgateway");
+        data1.putString("key","Paymentgateway");
         intent.putExtras(data1);
-//        Log.d("Username",user.getDisplayName());
-//        Log.d("Email",user.getEmail());
-        //Log.d("Pic",user.getPhotoUrl().toString());
         startActivity(intent);
         // [START_EXCLUDE]
         // [END_EXCLUDE]
@@ -223,84 +217,6 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
             firebaseAuth.removeAuthStateListener(authStateListener);
         }
     }
-
-    private void connectToSendBird(final String userId, final String userNickname) {
-        if (TextUtils.isEmpty(userId) || TextUtils.isEmpty(userNickname)) {
-            return;
-        }
-        // Show the loading indicator
-        showProgressBar(true);
-        ConnectionManager.login(userId, new SendBird.ConnectHandler() {
-            @Override
-            public void onConnected(User user, SendBirdException e) {
-                // Callback received; hide the progress bar.
-                showProgressBar(false);
-
-                if (e != null) {
-                    // Error!
-                    Toast.makeText(
-                            getApplication(), "" + e.getCode() + ": " + e.getMessage(),
-                            Toast.LENGTH_SHORT)
-                            .show();
-
-                    // Show login failure snackbar
-                    showSnackbar("Login to SendBird failed");
-                    return;
-                }
-
-                PrefrenceUtil.setConnected(true);
-
-                // Update the user's nickname
-                updateCurrentUserInfo(userNickname);
-                //  com.sendbird.android.sample.utils.PushUtils.registerPushHandler(new MyFirebaseMessagingService());
-
-                // Proceed to MainActivity
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-    }
-
-
-    private void updateCurrentUserInfo(final String userNickname) {
-
-        SendBird.updateCurrentUserInfo(userNickname, null, new SendBird.UserInfoUpdateHandler() {
-            @Override
-            public void onUpdated(SendBirdException e) {
-                if (e != null) {
-                    // Error!
-                    Toast.makeText(
-                            getApplicationContext(), "" + e.getCode() + ":" + e.getMessage(),
-                            Toast.LENGTH_SHORT)
-                            .show();
-
-                    // Show update failed snackbar
-                    showSnackbar("Update user nickname failed");
-
-                    return;
-                }
-
-                PrefrenceUtil.setNickname(userNickname);
-            }
-        });
-    }
-
-    private void showSnackbar(String text) {
-
-
-    }
-
-    // Shows or hides the ProgressBar
-    private void showProgressBar(boolean show) {
-        if (show) {
-            WaitingDialog.show(this);
-        } else {
-            WaitingDialog.dismiss();
-        }
-    }
-
-
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
