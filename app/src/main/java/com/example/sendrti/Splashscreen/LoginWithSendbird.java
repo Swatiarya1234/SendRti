@@ -38,6 +38,7 @@ public class LoginWithSendbird extends AppCompatActivity {
         email = findViewById(R.id.email);
         btn = findViewById(R.id.sendbird);
         SendBird.init(APP_ID,getApplicationContext());
+
         btn.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ShowToast")
             @Override
@@ -87,7 +88,7 @@ public class LoginWithSendbird extends AppCompatActivity {
                 // Update the user's nickname
                   updateCurrentUserInfo(userNickname);
                 //PushUtils2.registerPushHandler(new MyFirebaseMessagingService());
-                 Intent intent = new Intent(getApplication(), MainActivity.class);
+                Intent intent = new Intent(getApplication(), MainActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("key", "Sendbirdtype");
                 bundle.putString("nickname",userNickname);
