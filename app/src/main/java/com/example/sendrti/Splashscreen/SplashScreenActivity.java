@@ -55,9 +55,6 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
     private TextView continuewasguest;
     private Button signInButton;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -121,6 +118,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GoogleApi
                 data1.putString("key","continueasguest");
                 intent.putExtras(data1);
                 startActivity(intent);
+
             }
         });
         sendbird.setOnClickListener(new View.OnClickListener() {

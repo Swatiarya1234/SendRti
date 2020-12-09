@@ -39,6 +39,7 @@ public class LoginWithSendbird extends AppCompatActivity {
         btn = findViewById(R.id.sendbird);
         SendBird.init(APP_ID,getApplicationContext());
 
+
         btn.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ShowToast")
             @Override
@@ -83,7 +84,7 @@ public class LoginWithSendbird extends AppCompatActivity {
                     return;
                 }
 
-                   PrefrenceUtil.setConnected(true);
+                  PrefrenceUtil.setConnected(true);
 
                 // Update the user's nickname
                   updateCurrentUserInfo(userNickname);
@@ -96,6 +97,7 @@ public class LoginWithSendbird extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivity(intent);
                 finish();
+
 
             }
         });

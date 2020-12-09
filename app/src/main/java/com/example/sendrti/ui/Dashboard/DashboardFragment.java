@@ -43,6 +43,7 @@ public class DashboardFragment extends Fragment implements TabLayout.OnTabSelect
         final View root = inflater.inflate(R.layout.fragment_home, container, false);
         textView = root.findViewById(R.id.txt_image);
 
+
  //       textView = root.findViewById(R.id.continueasguest);
 //        Markssheet = root.findViewById(R.id.markssheet);
 //        statusfir = root.findViewById(R.id.firstatus);
@@ -56,8 +57,9 @@ public class DashboardFragment extends Fragment implements TabLayout.OnTabSelect
 //Initializing the tablayout
         tabLayout = (TabLayout) root.findViewById(R.id.tabLayout);
 
+      //   tabLayout.addTab(tabLayout.newTab().setText("Application Details"))
         //Adding the tabs using addTab() method
-        tabLayout.addTab(tabLayout.newTab().setText("Appliaction Details"));
+        tabLayout.addTab(tabLayout.newTab().setText("Application Details"));
         tabLayout.addTab(tabLayout.newTab().setText("Details of RTI"));
         tabLayout.addTab(tabLayout.newTab().setText("Safe Payments"));
 

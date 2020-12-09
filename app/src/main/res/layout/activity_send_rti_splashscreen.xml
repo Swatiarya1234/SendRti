@@ -89,9 +89,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Marks"
+                    android:text="Government Funds"
                     android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:textSize="9sp"
                     android:layout_marginTop="55dp"
                     android:layout_below="@+id/imageView">
 
@@ -118,9 +118,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Marks"
+                    android:text="Status of fir"
                     android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:textSize="9sp"
                     android:layout_marginTop="55dp"
                     android:layout_below="@+id/imageView">
 
@@ -151,9 +151,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Marks"
+                    android:text="Copy of your marksheet"
                     android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:textSize="9sp"
                     android:layout_marginTop="55dp"
                     android:layout_below="@+id/imageView">
 
@@ -190,15 +190,16 @@
                 android:background="#fff">
 
             </ImageButton>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
                 android:layout_gravity="center"
-                android:text="Marks"
-                android:textStyle="bold"
-                android:textSize="12sp"
                 android:layout_marginTop="55dp"
-                android:layout_below="@+id/imageView">
+                android:text="Delay of passport"
+                android:textSize="9sp"
+                android:textStyle="bold">
 
             </TextView>
         </androidx.cardview.widget.CardView>
@@ -223,9 +224,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Marks"
+                android:text="Property related documents"
                 android:textStyle="bold"
-                android:textSize="12sp"
+                android:textSize="7sp"
                 android:layout_marginTop="55dp"
                 android:layout_below="@+id/imageView">
 
@@ -255,9 +256,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Marks"
+                android:text="Cannot find"
                 android:textStyle="bold"
-                android:textSize="12sp"
+                android:textSize="9sp"
                 android:layout_marginTop="55dp"
                 android:layout_below="@+id/imageView">
 
@@ -283,7 +284,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:layout_marginLeft="25dp"
-            android:text="BY Signing in you agree to our">
+            android:text="By Signing in you agree to our">
 
         </TextView>
 

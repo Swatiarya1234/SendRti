@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(type.contains("continueasguest"))
                 {
+
                     String nickname = bundle.getString("User");
                     name.setText(nickname);
                     emailAddress.setVisibility(View.GONE);
@@ -132,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.mainnavcontroller, menu);
-
         return true;
     }
     @Override
@@ -142,10 +142,11 @@ public class MainActivity extends AppCompatActivity {
 
             navController.navigate(R.id.nav_Home2);
             return true;
+
         }
         if(id == R.id.action_notifiaction){
-            navController.navigate(R.id.nav_notification);
 
+            navController.navigate(R.id.nav_notification);
             return true;
         }
         return super.onOptionsItemSelected(item);

@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.sendrti.PrefrenceUtil.PrefrenceUtil;
 import com.example.sendrti.R;
 
 public class Faq extends Fragment implements View.OnClickListener {
@@ -34,6 +35,7 @@ public class Faq extends Fragment implements View.OnClickListener {
         getview(view);
         plusbutton.setOnClickListener(this);
         Plusbutton2.setOnClickListener(this);
+        PrefrenceUtil.init(getActivity());
         //    Plusbutton3.setOnClickListener(this);
         plusbutton3.setOnClickListener(this);
         plusbutton4.setOnClickListener(this);
