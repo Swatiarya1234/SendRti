@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PaymentGateway.pricing.EmailPricing.EmailActivity"></activity>
-        <activity android:name=".ui.property.Property2" />
         <activity android:name=".Splashscreen.LoginWithSendbird"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -24,16 +23,15 @@
         <activity android:name=".PrefrenceUtil.TypingIndicato" />
         <activity android:name=".PrefrenceUtil.TextUtil" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.UplaodRelevantAttachment.UplaodRelevantAttachment3" />
-        <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.UplaodRelevantAttachment.Upload" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.PaymentInvoice.Paymentinvoic" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.MyRtiApplication.MyRtiApplicatio" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.EdityourProfile.Edityourprofil" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.Downloadyourapi.Downloadyouapi" />
         <activity android:name=".MyRTI.Pakage.tablayouts.tablayoutssubparts.AppliactionProgress.AppliactionStatus.ApplicationStatu" />
-        <activity android:name=".ui.passport.Passpor" />
         <activity
             android:name=".Splashscreen.SplashScreenActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

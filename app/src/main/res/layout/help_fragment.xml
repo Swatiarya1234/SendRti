@@ -22,8 +22,7 @@
             android:layout_marginTop="95dp"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/background2"
-            android:layout_below="@+id/li_layout3">
+            android:background="@drawable/background2">
 
 
             <androidx.cardview.widget.CardView
@@ -94,7 +93,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:id="@+id/icon2"
+                android:id="@+id/icon3"
                 android:layout_marginLeft="23dp"
                 android:layout_marginRight="23dp"
                 android:layout_marginTop="23dp"

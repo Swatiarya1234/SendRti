@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../SendRti.iml" filepath="$PROJECT_DIR$/../SendRti.iml" group="SendRti" />
-      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="SendRti/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-848678207/SendRti.iml" filepath="$PROJECT_DIR$/.idea/modules/-848678207/SendRti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SendRti.app.iml" filepath="$PROJECT_DIR$/.idea/modules/SendRti.app.iml" />
     </modules>
   </component>
 </project>

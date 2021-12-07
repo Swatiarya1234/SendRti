@@ -64,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/WHATISRTI"
                         android:gravity="center"
-                        android:id="@+id/textView12"
+                        android:id="@+id/whatisrti"
                         android:layout_marginBottom="23dp"
                         android:textAlignment="gravity"
                         android:textSize="13dp"
@@ -104,7 +104,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/li_gravity12"
+                android:id="@+id/li_gravity_plain"
                 android:layout_marginLeft="23dp"
                 android:orientation="vertical"
                 android:layout_marginRight="23dp"
@@ -176,7 +176,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/li_gravity12"
+                android:id="@+id/li_gravity_plain_next"
                 android:layout_marginLeft="23dp"
                 android:layout_marginRight="23dp"
                 android:orientation="vertical"
